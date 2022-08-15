@@ -15,13 +15,14 @@ function initApp() {
 
 if(window.hasOwnProperty("cordova")) {
   //cordova
+  console.log('Navigateur de mobile.')
   document.addEventListener('deviceready', () => {
     initApp()
   }, false);
 } else {
   //browser
   document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('Navigateur, window.useCordova =', window.useCordova)
+    console.log('Navigateur de bureau')
     initApp()
   })
 }

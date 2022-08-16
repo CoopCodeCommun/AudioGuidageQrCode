@@ -7,13 +7,14 @@ import App from './App.vue'
 import '@/assets/css/bootstrap-5.0.2/bootstrap.min.css'
 import '@/assets/js/bootstrap-5.0.2/bootstrap.bundle.min.js'
 
+window.usingCordova = true
 
 function initApp() {
   const app = createApp(App)
   app.use(router).mount('#app')
 }
 
-if(window.hasOwnProperty("cordova")) {
+if(window.usingCordova === true) {
   //cordova
   console.log('Navigateur de mobile.')
   document.addEventListener('deviceready', () => {

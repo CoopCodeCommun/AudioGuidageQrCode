@@ -10,20 +10,6 @@
       </div>
     </div>
 
-    <!--
-    <div class="container-wd-pg">
-      <div>
-        <div class="btn-play">
-          <div class="play-bt" onclick="this.classList.toggle('active')">
-              <div class="fond" x="0" y="0" width="200" height="200"></div>
-            <div class="icon" width="200" height="200">
-              <div class="side gauche" x="0" y="0" width="200" height="200" fill="#fff"></div>
-              <div class="side droite" x="0" y="0" width="200" height="200" fill="#fff"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-  -->
     <div class="marquee-wrap">
       <div class="marquee">
         <p style="color: white;text-shadow: 3px 3px 4px black;">
@@ -39,10 +25,7 @@
         </p><br/>
       </div>
     </div>
-    <!--
-    </div>
-    <button @click="router.push('/')">Retour</button><br/>
-    -->
+
   </section>
 
 </template>
@@ -104,8 +87,8 @@ function toggleAction() {
   background-size: cover;
 }
 
-.container-wd-pg {
-  padding-top: 5%;
+.marquee-wrap {
+  /* hauteur calculée */
+	height: calc(100% - 100px);
 }
-
 </style>

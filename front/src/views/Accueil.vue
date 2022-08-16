@@ -1,7 +1,11 @@
 <template>
-  <div>{{ resultat }}</div>
-
   <section id="intro" :style="{ backgroundImage: `url(${backgroundImage})` }">
+  <!-- dev -->
+    <div class="d-flex flex-row justify-content-center">
+      <div>{{ resultat }}</div>
+      <button @click="testGoPage(1)">test page 1</button>
+      <button @click="testGoPage(5)">test page 5</button>
+    </div>
     <div>
       <header>
         <h2 style="color:white;">Jardin App.</h2>
@@ -83,6 +87,11 @@ for (let i = 0; i < routesQrCode.length; i++) {
 
 
 let resultat = ref('')
+
+// dev test
+function testGoPage(numPage) {
+  router.push('/Page'+numPage)
+}
 
 function onScan(decodedText, decodedResult) {
   console.log('-> fonc onScan !')

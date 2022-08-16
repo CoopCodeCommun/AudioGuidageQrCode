@@ -23,6 +23,7 @@ npm create vite@latest front -- --template vue
 cd front
 npm install
 npm install vue-router -S
+npm install bootstrap-icons-vue -S
 npm run dev
 ```
 
